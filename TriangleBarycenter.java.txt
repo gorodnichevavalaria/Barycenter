@@ -1,0 +1,24 @@
+public class TriangleBarycenter {
+    public static void main(String[] args) {
+        double[] pointA = {4, 6};
+        double[] pointB = {12, 4};
+        double[] pointC = {10, 10};
+
+        double[] barycenter = findBarycenter(pointA, pointB, pointC);
+        System.out.printf("Барицентр: {%.4f, %.4f}%n", barycenter[0], barycenter[1]);
+    }
+
+    public static double[] findBarycenter(double[] pointA, double[] pointB, double[] pointC) {
+        double x1 = pointA[0];
+        double y1 = pointA[1];
+        double x2 = pointB[0];
+        double y2 = pointB[1];
+        double x3 = pointC[0];
+        double y3 = pointC[1];
+
+        double barycenterX = (x1 + x2 + x3) / 3;
+        double barycenterY = (y1 + y2 + y3) / 3;
+
+        return new double[]{barycenterX, barycenterY};
+    }
+}
